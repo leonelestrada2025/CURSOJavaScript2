@@ -1,0 +1,9 @@
+{
+    "cadena": "Jhon",
+    "numero": "35",
+    "boolean": "true",
+    "objeto":{
+        "facebook":"Leonel Estrada"
+    },
+    "nulo":null
+}

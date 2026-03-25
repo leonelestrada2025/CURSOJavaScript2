@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 12-15</title>
+</head>
+<body>
+    <script>
+        //Numeros primos metodo mircha
+        //Logica de programacion
+        //Division con residuo 0.
+        /*const numeroPrimo = (numero = undefined) =>{
+         if(numero === undefined) return console.warn("No ingresaste un numero"); 
+
+            if(typeof numero !== "number") return console.error(`El valor "${numero}" ingresado no es numero`);
+
+            if(numero === 0) return console.error(`El valor ingresado no puede ser 0`);
+
+            if(numero === 1) return console.error(`El valor ingresado no puede ser 1`);
+
+            if(Math.sign(numero) === -1) return console.error(`El valor ingresado no puede ser negativo`);
+            
+            let divisible = false;
+            for(let i = 2; i < numero; i++){
+                if((numero % i) === 0){
+                    divisible = true;
+                    break;
+                }
+
+            }
+            return (divisible)
+            ?console.log(`El numero ${numero} no es primo`)
+            :console.log(`El numero ${numero} si es primo`)
+        }
+        numeroPrimo();
+        numeroPrimo("320");
+        numeroPrimo(true);
+        numeroPrimo(0);
+        numeroPrimo(1);
+        numeroPrimo(13);
+        numeroPrimo(200);*/
+        /*const numeroPar = (numero = undefined) =>{
+        if(numero === undefined) return console.warn("No ingresaste un numero"); 
+
+            if(typeof numero !== "number") return console.error(`El valor "${numero}" ingresado no es numero`);
+
+            if(numero === 0) return console.error(`El valor ingresado no puede ser 0`);
+
+            if(Math.sign(numero) === -1) return console.error(`El valor ingresado no puede ser negativo`);
+
+            return ((numero % 2) === 0)
+
+            ?console.log(`El numero ${numero} es par`)
+            :console.log(`El numero ${numero} no es par`)
+        
+        }
+        numeroPar();
+        numeroPar("3");
+        numeroPar(0);
+        numeroPar(-1);
+        numeroPar(true);
+        numeroPar([]);
+        numeroPar({});
+        numeroPar(2);
+        numeroPar(3);*/
+        const calculadora = (grados = undefined, unidad = undefined) =>{
+        
+        if(grados === undefined) return console.warn("No ingresaste grados a convertir");
+
+        if(typeof grados !== "number") return console.warn(`El valor ingresado ${grados} no es un numero`);
+        
+        if(unidad === undefined) return console.warn("No ingresaste el tipo de grado a convertir"); 
+        
+        if(typeof unidad !== "string") return console.warn(`El valor ingresado ${unidad} no es una cadena de texto`);
+
+        if(unidad.length !== 1 || !/(C||F)/.test(unidad)) return console.warn("Valor invalido");
+
+        if(unidad === "C"){
+            return console.info(`${grados}°C = ${Math.round((grados * (9/5)) + 32)}°F`);
+        }else if(unidad === "F"){
+            return console.info(`${grados}°F = ${Math.round((grados - 32) * (5/9))}°C`);
+        } 
+        }
+        calculadora();
+        calculadora("2");
+        calculadora(2);
+        calculadora(2,"Hola");
+        calculadora(2,"E");
+        calculadora(0,"C");
+        calculadora(32,"F");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizadores</title>
+</head>
+<body>
+    <script>
+        //Primer ejercicio de programacion asincrona.
+        //Lanzar acciones despues de una cierta cantidad de tiempo o n cantidad de veces.
+        /*setTimeout(() => {
+            console.log("Ejecutando un setTimeOut, esto se ejecuta una sola vez");
+        }, 3000)
+        setInterval(() => {
+            console.log("Ejecutando un SetInterval, esto se ejecuta indefinidamente cada intervalo de tiempo");
+        }, 3000)*/
+
+        let temporizador = setTimeout(() => {
+            console.log(new Date().toLocaleTimeString())
+        },1000);
+        
+        clearTimeout(temporizador);//cancela el setTimeOut
+        
+        let temporizadorU = setInterval(() => {
+            console.log(new Date().toLocaleTimeString())
+        },1000);
+        
+        clearInterval(temporizadorU);//cancela el setTimeOut
+
+    </script>
+</body>
+</html>

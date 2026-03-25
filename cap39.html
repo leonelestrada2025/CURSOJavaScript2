@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios nuevos</title>
+</head>
+<body>
+    <script>
+        /*function Calcular(){
+            numero = Math.round(Math.random() * 500);
+            console.log(numero)
+        }
+        Calcular();
+        //Resolucion
+        const aleatorio = () =>
+        console.info(Math.round((Math.random()*100)+500))
+        
+        aleatorio();
+
+        const capicua = (numero) =>{
+            numeroArray = String(numero).split('');
+            numeroReversa = numeroArray.reverse();
+            numeroNuevo = Number(numeroReversa.join(''));
+            if(numero === numeroNuevo){
+                console.log(`El numero ${numero} es capicua`);
+            }else{
+                console.log(`El numero ${numero} no es capicua`);
+            }
+        }
+        capicua(2002);*/
+        //Metodo Mircha;
+        /*const capicuaUno = (numeroUno = 0) =>{
+            if(!numeroUno) return console.warn("No ingresaste un numero");
+            parseInt(numeroUno);
+            
+            if(typeof numeroUno !== Number) return console.error(`El valor "${numeroUno}" ingresado no es numero`);
+            
+            numeroUno = numeroUno.toString();
+            let alrreves = numeroUno.split('').reverse().join('');
+            
+            
+            return (numeroUno === alrreves)
+                ?console.info(`El numero ${numeroUno} es capicua`)
+                :console.info(`El numero ${numeroUno} no es capicua`)
+
+        }
+        capicuaUno();
+        capicuaUno("19");
+        capicuaUno(2000);
+        capicuaUno(2002);*/
+        
+        //Multiplicar el factorial de un numero.
+        const factorial = (numero = undefined) =>{
+           if(numero === undefined) return console.warn("No ingresaste un numero"); 
+
+            if(typeof numero !== "number") return console.error(`El valor "${numero}" ingresado no es numero`);
+
+            if(numero === 0) return console.error(`El valor ingresado no puede ser 0`);
+
+            if(Math.sign(numero) === -1) return console.error(`El valor ingresado no puede ser negativo`);
+
+            let factorial = 1;
+            for(let i = numero; i > 1; i--){
+                factorial *= i;
+            }
+            return console.info(`El factorial de ${numero} es ${factorial}`)
+        }
+        factorial();
+        factorial("5");
+        factorial([1,2,3]);
+        factorial({});
+        factorial(0);
+        factorial(-5);
+        factorial(5)
+    </script>
+</body>
+</html>

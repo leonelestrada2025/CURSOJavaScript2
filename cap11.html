@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>
+        let a = new String("Hola");
+        console.log(a);
+
+        const b = {
+
+        }
+        console.log(b);
+
+        const c = new Object();
+        console.log(c);
+        const leo = {
+            nombre:'leonel',
+            apellido:'Estrada',
+            edad:22,
+            pasatiempo:['Ir al gym','Programar','Jugar Futbol','Ir al gym'],
+            soltero:false,
+            contacto:{
+                email:'estradabarreraleonelarnulfo@gmail.com',
+                telefono: 5657054812,
+                facebook:'leonel estrada'
+
+            },
+            saludar:function(){
+                console.log(`Hola mi nombre es ${this.nombre} ${this.apellido}, tengo ${this.edad} años y me puedes seguir como ${this.contacto.facebook} en facebook.`);
+
+            }
+
+        }
+        console.log(leo);
+        console.log(leo['nombre']);
+        console.log(leo.apellido)
+        console.log(leo.soltero);
+        console.log(leo.pasatiempo[2]);
+        console.log(leo.contacto.facebook);
+        leo.saludar();
+        console.log(leo.hasOwnProperty('nombre'));
+
+    </script>
+</body>
+</html>

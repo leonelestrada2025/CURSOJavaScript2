@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma Matriz</title>
+</head>
+<body>
+    <script>
+        const matrizUno = [1,2,3];
+        const matrizDos = [4,5,6];
+        const matrizTres = [7,8,9]
+        const Matrizfinal = [...matrizUno, ...matrizDos, ...matrizTres]
+        let sumaPrincipal = parseInt(matrizUno[0]) + parseInt(matrizDos[1]) + parseInt(matrizTres[2]);
+        let sumaSecundaria = parseInt(matrizUno[2]) + parseInt(matrizDos[1]) + parseInt(matrizTres[0]);
+        console.log(`La suma de la Diagonal principal es ${sumaPrincipal}`);
+        console.log(`La suma de la Diagonal secunadria es ${sumaSecundaria}`);
+        if (sumaPrincipal > sumaSecundaria){
+            console.log(`La suma de la diagonal principal ${sumaPrincipal} es mayor que la diangonal secuandria ${sumaSecundaria}`);
+        }else if(sumaSecundaria > sumaPrincipal){
+            console.log(`La suma de la diagonal Secuandria ${sumaSecundaria} es mayor que la diangonal Principal ${sumaPrincipal}`);
+        }else if(sumaSecundaria == sumaPrincipal){
+            console.log("La suma de ambas diagonales es igual")
+        }else{
+            console.error("Error");
+        }
+
+
+
+    </script>
+</body>
+</html>

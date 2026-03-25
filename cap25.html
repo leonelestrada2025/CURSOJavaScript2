@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos estaticos getters y Setters</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(nombre, genero){
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+        sonar(){
+            console.log("Soy un animal y hago un sonido")
+        }
+        saludar(){
+            console.log(`Hola mi nombre es ${this.nombre}`)
+        
+        }
+    }
+        class Perro extends Animal{
+            constructor(nombre, genero, tamanio){
+                super(nombre,genero);
+                this.tamanio = tamanio;
+                this.raza = null;
+            }
+            ladrar(){
+                console.log("guauu guauu")
+            }
+            static queEres(){
+                console.log("Soy una especie canina considerada el mejor amigo del hombre")
+
+            }
+            get getRaza(){
+                return this.raza;
+
+            }
+            set setRaza(raza){
+                this.raza = raza;
+            }
+
+        }
+        Perro.queEres();
+        const scooby = new Perro("Scooby","Macho","Grande")
+        console.log(scooby)
+        scooby.ladrar();
+        scooby.saludar();
+        console.log(scooby.getRaza)
+        scooby.setRaza = "Gran Danes";
+        console.log(scooby.getRaza)
+        
+        
+
+    </script> 
+</body>
+</html>

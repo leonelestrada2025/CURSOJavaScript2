@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones Regulares</title>
+</head>
+<body>
+    <script>
+        let cadena = "hola Lorem me llamo asi porque soy una mujer que hace muchas cosas";
+        let expReg = new RegExp("lorem","i");
+        let expReg2 = /lorem/ig;
+        console.log(expReg.test(cadena));
+        console.log(expReg.exec(cadena));
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+        
+
+    </script>
+</body>
+</html>

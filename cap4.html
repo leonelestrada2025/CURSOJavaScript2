@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template strings</title>
+</head>
+<body>
+    <script>
+        let nombre = 'leonel';
+        let apellido = "estrada";
+        // concatenacion
+        let saludo = 'Hola mi nombre es ' + nombre + ' ' + apellido + ".";
+        console.log(saludo);
+        // template strings
+        let saludo2 =`hola mi nombre es ${nombre} ${apellido}.`;
+        console.log(saludo2);
+
+        let ul = "<ul><li>primavera</li><li>verano</li><li>otoño</li><li>invierno</li></ul>";
+        console.log(ul);
+        let ul2 = `<ul>
+                <li>primavera</li>
+            <li>verano</li>
+            <li>otoño</li>
+            <li>invierno</li>
+            </ul>`;
+        console.log(ul2);
+
+        let ul3 = "<ul>";
+
+        ul3 += "<li>primavera</li>";
+        ul3 += "<li>verano</li>";   
+        ul3 += "<li>otoño</li>";
+        ul3 += "<li>invierno</li>";
+        ul3 += "</ul>";
+        console.log(ul3);
+
+
+        
+    </script>
+    <h1>Fundamentos JavaScript</h1>
+    <ul>
+        <li>
+            primavera
+        </li>
+        <li>
+            verano  
+        </li>
+        <li>
+            otoño       
+        </li>
+        <li>
+            invierno    
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 21-24</title>
+</head>
+<body>
+    <script>
+        //Array que devuelve otro array con sus numero elevados al cuadardo.
+        /*const devolverCuadarado = (arrayOriginal = undefined) =>{
+            if(arrayOriginal === undefined) return console.warn("No ingresate los datos a convertir");
+            if(!(arrayOriginal instanceof Array)) return console.warn(`El valor ingresado ${arrayOriginal} no es un arreglo`);
+            if(arrayOriginal.length === 0) return console.info(`El array ${arrayOriginal} no puede estar vacio`);
+            for (let numero of arrayOriginal) {
+                if(typeof numero !== "number") return console.info(`El valor ${numero} no es un numero solo se deben ingresar numeros`)
+                
+            }
+            const newArray = arrayOriginal.map(el => el * el);
+
+            return console.info(`Arrgelo original ${arrayOriginal}.\nArreglo elevado al cuadrado ${newArray}`)
+        }
+        devolverCuadarado();
+        devolverCuadarado(true);
+        devolverCuadarado({});
+        devolverCuadarado([]);
+        devolverCuadarado(["A",1]);
+        devolverCuadarado([1,2,{},4]);
+        devolverCuadarado([1,2,4]);
+        */
+       //Funcion que devuelva el numero mas alto y el numero mas bajo de dicho arreglo.
+
+        /*const altoBajo = (arr = undefined) => {
+            if(arr === undefined) return console.warn("No ingresate los datos a convertir");
+            if(!(arr instanceof Array)) return console.warn(`El valor ingresado ${arr} no es un arreglo`);
+            if(arr.length === 0) return console.info(`El array ${arr} no puede estar vacio`);
+            for (let numero of arr) {
+                if(typeof numero !== "number") return console.info(`El valor ${numero} no es un numero solo se deben ingresar numeros`)          
+            }
+            return console.info(`Arreglo original ${arr}\n valor mayor ${Math.max(...arr)}\n valor menor ${Math.min(...arr)}`)
+        }
+        altoBajo();
+        altoBajo({});
+        altoBajo([]);
+        altoBajo(["A",1,2]);
+        altoBajo([{},2]);
+        altoBajo([1,2,3,4,5]);*/
+
+        //Funcion que mete los numeros paraes a un array y los impares a otro array
+        const altoBajo = (arr = undefined) => {
+            if(arr === undefined) return console.warn("No ingresate los datos a convertir");
+            if(!(arr instanceof Array)) return console.warn(`El valor ingresado ${arr} no es un arreglo`);
+            if(arr.length === 0) return console.info(`El array ${arr} no puede estar vacio`);
+            for (let numero of arr) {
+                if(typeof numero !== "number") return console.info(`El valor ${numero} no es un numero solo se deben ingresar numeros`)          
+            }
+            return console.info({
+                pares: arr.filter(numero => numero % 2 === 0),
+                impares: arr.filter(numero => numero % 2 === 1),
+            })
+        }
+        altoBajo();
+        altoBajo({});
+        altoBajo([]);
+        altoBajo(["A",1,2]);
+        altoBajo([{},2]);
+        altoBajo([1,2,3,4,5]);
+    </script>
+</body>
+</html>

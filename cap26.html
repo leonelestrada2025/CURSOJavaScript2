@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto console</title>
+</head>
+<body>
+    <script>
+        console.log(console);
+        console.error("Esto es un error");
+        console.warn("Esto es un aviso")
+        console.info("DETENTE ESTO ES UN MENSJE INFORMATIVO")
+        console.log("CONSOLE LOG ES UN REGISTRO DE LO QUE HA PASADO EN NUESTRA APLICACION")
+        let nombre = "Leonel",
+        apellido = "Estrada",
+        edad = 22;
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(nombre, apellido, edad)
+        console.log(`Hola mi nombre es %s mi apellido es %s y mi edad es %d`, nombre, apellido, edad);
+        console.clear();
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+        console.clear();
+        console.group("Cursos de jhon mircha en youtube")
+        console.log("Este es el curso de javaScript")
+        console.log("Este es el curso de NodeJs")
+        console.groupEnd();
+        console.groupCollapsed("Cursos de jhon mircha en youtube")
+        console.log("Este es el curso de javaScript")
+        console.log("Este es el curso de NodeJs")
+        console.groupEnd();
+        console.clear();
+        console.log(console)
+        console.table(Object.entries(console).sort())
+
+        const numeros = [1,2,3,4,5], vocales = ["A","E","I","O","U"]
+        console.table(numeros)
+        console.table(vocales)
+        const perro = {
+            nombre: "Burbuja",
+            raza: "Chiuahua",
+            tamanio: "Pequeño"
+       }
+       console.table(perro)
+
+       console.clear();
+       console.time("Cuanto Tiempo tardo mi codigo");
+       const arreglo = Array(1000000);
+       for (let i = 0; i < arreglo.length; i++){
+        arreglo[i] = i;
+
+       }
+       console.timeEnd("Cuanto Tiempo tardo mi codigo");
+       //console.log(arreglo)
+
+    console.clear();
+
+    for (let i = 0; i <= 100; i++){
+        console.count("Codigo for")
+        console.log(i);
+       }
+       console.clear();
+       let x = 1, y = 2, pruebaXY = "Se espera que x siempre se menor que y"
+       console.assert(x < y,(x,y,pruebaXY));
+       
+
+
+    </script>
+</body>
+</html>

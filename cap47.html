@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event loop</title>
+</head>
+<body>
+    <script>
+        //HILOS MANDA UNA PETICION Y REGRESA UN TRIGGER Y CONFORME TERMINA UNA INICIA UNA NUEVA 
+        //SINGLE TREAD
+        //CONCURRENCIA Y PARALELISMO
+        //CONCURRENCIA CUANDO DOS O MAS TAREAS PROGRESAN SIMULTANEAMENTE Y PROGRESAN AL MISMO TIEMPO
+        //UNA EMPEZO ANTES O DESPUES.
+        //PARALELISMO CUANDO DOS O MAS TAREAS SE EJECUTAN AL MISMO TIEMPO
+        //PUEDE SER MAS RELACIONADO A MULTI TREAD
+        //BLOQUEANTE O NO BLOQUEANTE SE REFIERE A COMO TOMA LA FASE DE ESPERA
+        //BLOQUEANTE NO VA REGRESAR EL CONTROL A LA APLICACION HASTA QUE TERMINE TODA SU TAREA.
+        //NO BLOQUENATE LAS OPERACIONES SE EJECUTAN Y DEVUELVEN EL CONTROL INMEDIATAMENTE AL HILO PRINCIPAL NO IMPORTANDO SI YA TERMINO O NO LA TAREA
+        //SINCRONIA Y ASINCRONIA 
+        //CUANDO TENDRA LUGAR LA RESPUESTA
+        //SINCRONO ESPERA LA RESPUESTA EN TIEMPO PRESENTE Y YA SIGUE
+        //ASICRONO LA RESPUESTA VA A SUCEDER A FUTURO PERO NO SABE CUANDO SIN ESPERAR RESPUESTA REGRESA AL HILO PRINCIPAL EL CONTROL
+        //BLOQUENTE CON SINCRONO
+        //NO BLOQUANTE ON ASINCRONO 
+
+        //CODIGO SINCRONO BLOQUEANTE
+        (() =>{
+            console.log("Codigo sincrono")
+            console.log("Inicio")
+        
+        function dos(){
+            console.log("Dos")
+        }
+        function Uno(){
+            console.log("Uno")
+            dos();
+            console.log("tres")
+        }
+        Uno();
+        console.log("fin")
+
+        })();
+        //CODIGO ASINCRONO NO BLOQUENATE 
+        (() =>{
+            console.log("Codigo Asincrono");
+            console.log("Inicio")
+            function dos(){
+                setTimeout(function(){
+                    console.log("Dos")
+                }, 1000);
+                
+            }
+            function Uno(){
+                setTimeout(function(){
+                    console.log("Uno");
+                },0);
+                dos();
+                console.log("Tres");
+            }
+            uno();
+            console.log("tres")
+        })()
+    </script>
+</body>
+</html>

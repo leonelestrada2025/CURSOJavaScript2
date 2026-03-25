@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 15-18</title>
+</head>
+<body>
+    <script>
+        //Programa una funcion para convertir numeros de base binaria a decimal y viceversa 
+        const binario = (numero = undefined, base = undefined) =>{
+        if(numero === undefined) return console.warn("No ingresaste numero a convertir");
+
+        if(typeof numero !== "number") return console.warn(`El valor ingresado ${numero} no es un numero`);
+        
+        if(base === undefined) return console.warn("No ingresaste la base a convertir"); 
+        
+        if(typeof base !== "number") return console.warn(`El valor ingresado ${base} no es un numero`);
+
+        if(base === 2){
+            return console.info(`El numero ${numero} base ${base} = ${parseInt(numero, base)} base 10`)
+        }else if(base === 10){
+            return console.info(`El numero ${numero} base ${base} = ${numero.toString(2)} base 2`)
+        }
+        else{
+            return console.info("La base ingresada no es valida")
+        }
+        }
+        binario();
+        binario("2");
+        binario(100);
+        binario(100,"2");
+        binario(101,2);
+        binario(4,10);
+        binario(114,10);
+        binario(101,3);
+
+        //Programar una funcion que aplique un descuento a una cantidad dada
+        const aplicarDescuento = (cantidad = undefined, descuentoUno = 0) =>{
+        if(cantidad === undefined) return console.warn("No ingresaste la catidad");
+
+        if(typeof cantidad !== "number") return console.warn(`El valor ingresado ${cantidad} no es un numero`);
+        
+        if(cantidad === 0) return console.warn(`la cantidad ingresada ${cantidad} no puede ser 0`); 
+
+        if(Math.sign(cantidad) === -1) return console.error(`El valor ingresado ${cantidad} no puede ser negativo`);
+        
+        if(typeof descuentoUno !== "number") return console.warn(`El valor ingresado ${descuentoUno} no es un numero`);
+        
+        if(Math.sign(descuentoUno) === -1) return console.error(`El valor ingresado ${descuentoUno} no puede ser negativo`);
+
+        return console.info(`$${cantidad} - ${descuentoUno}% = $${cantidad - ((cantidad * descuentoUno) / 100)}`)
+        }  
+        
+        aplicarDescuento();
+        aplicarDescuento("200");
+        aplicarDescuento(0);
+        aplicarDescuento(-1000);
+        aplicarDescuento(100,"20");
+        aplicarDescuento(100,-10);
+        aplicarDescuento(100);
+        aplicarDescuento(100,25);
+
+        //Validar una fecha.
+        //Programa una funcion que dada una fecha valida nos diga cuantos años han pasado hasta el dia de hoy
+        const calcularAnios = (fecha = undefined) =>{
+          if(fecha === undefined) return console.warn("No ingresaste la fecha");
+          if(!(fecha instanceof Date)) return console.warn(`El valor ingresado ${fecha} no es una fecha valida`); 
+
+          let hoyMenosFecha = new Date().getTime() - fecha.getTime(),
+           fechaBuena = 1000 * 60 * 60 * 24 * 365, 
+           aniosHumanos = Math.floor(hoyMenosFecha / fechaBuena);
+
+           return (Math.sign(aniosHumanos) === -1) 
+           ?console.info(`faltan ${Math.abs(aniosHumanos)} años para el ${fecha.getFullYear()}`)
+           :(Math.sign(aniosHumanos) === 1) 
+            ? console.info(`Han pasado ${aniosHumanos} años desde ${fecha.getFullYear()}`)
+            :(`Estamos en el año actual ${fecha.getFullYear()}`)
+
+
+        }
+        calcularAnios();
+        calcularAnios({});
+        calcularAnios(true);
+        calcularAnios(new Date(2026, 0, 23));
+        calcularAnios(new Date(1984, 4,23));
+        calcularAnios(new Date(2084, 4,23));
+
+
+
+        </script>
+</body>
+</html>

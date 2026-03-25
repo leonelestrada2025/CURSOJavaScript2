@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(nombre,genero){
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+        sonar(){
+            console.log("Hago sonidos porque estoy vivo");
+        }
+        saludar(){
+            console.log(`Hola mi nombre es ${this.nombre}`)
+        }
+    }
+     class Perro extends Animal{
+        constructor(nombre,genero,tamanio){
+            super(nombre,genero);
+            this.tamanio = tamanio;
+        }
+        sonar(){
+            console.log("Soy un perro y hago un ladrido")
+        }
+        ladrar(){
+            console.log("Guauuu Guauuuu")
+        }
+     }
+    const mimi = new Animal("Mimi","Hembra"),
+    scooby = new Perro("Scooby","Macho","Gigante");
+    console.log(mimi);
+    mimi.saludar();
+    mimi.sonar();
+    scooby.saludar();
+    scooby.sonar();
+    console.log(scooby);  
+    </script>
+</body>
+</html>

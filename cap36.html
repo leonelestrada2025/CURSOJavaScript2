@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Dos</title>
+</head>
+<body>
+    <script>
+        //Inversion de cadena de texto.
+        function alrrevez(cadena){
+            let cadenaArray = cadena.split('');
+            console.warn("Esta es la cadena array");
+            console.table(cadenaArray);
+            arrayInvertido = cadenaArray.reverse();
+            console.warn("Este es el array invertido");
+            console.table(arrayInvertido);
+            palabraInvertida = arrayInvertido.join('');
+            console.warn("palabra invertida")
+            console.log(palabraInvertida);
+
+        }
+
+        alrrevez("cadena")
+
+        /*  Mircha
+        const invertirCadena = (cadenaUno = "") =>
+        (!cadenaUno)
+            ?console.warn("No ingresaste una cadena de texto")
+            :console.info(cadenaUno.split("").reverse.join(""));
+        invertirCadena();
+        invertirCadena("LEONEL")*/
+
+        
+    </script>
+</body>
+</html>

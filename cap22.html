@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipos</title>
+</head>
+<body>
+    <script>
+        /*const animal={
+            nombre:'Snoopy',
+            sonar(){
+                console.log("Hago sonidos porque estoy vivo")
+            }
+        }
+        const animal2 ={
+            nombre:'Scrapy',
+            sonar(){
+                console.log("Hago sonidos porque estoy vivo")
+            }
+        }
+
+        console.log(animal)
+
+        */
+       /*
+       //Funcion constructora.
+       function Animal (nombre, genero){
+        //ATRIBUTOS
+        this.nombre = nombre;
+        this.genero = genero;
+        //METODOS
+        this.sonar = function(){
+            console.log("Hago sonidos porque estoy vivo")
+
+        }
+        this.saludar = function(){
+            console.log(`Hola yo soy ${this.nombre}`)
+        }
+
+
+       }
+       const snoopy = new Animal("snoopy","macho"),
+       lolabunny = new Animal("lola bunny","hembra")
+       
+       console.log(snoopy);
+       console.log(lolabunny);
+       snoopy.sonar();
+       snoopy.saludar();
+       lolabunny.sonar();
+       lolabunny.saludar();
+       
+       */
+      /*
+      const animal={
+            nombre:'Snoopy',
+            sonar(){
+                console.log("Hago sonidos porque estoy vivo")
+            }
+        }
+        const animal2 ={
+            nombre:'Scrapy',
+            sonar(){
+                console.log("Hago sonidos porque estoy vivo")
+            }
+        }
+
+        console.log(animal)
+        */
+        
+
+        
+       //Funcion constructora.
+       function Animal (nombre, genero){
+        //ATRIBUTOS
+        this.nombre = nombre;
+        this.genero = genero;
+        //METODOS
+        }
+        Animal.prototype.sonar = function(){
+            console.log("Hago sonidos porque estoy vivo")
+
+        }
+        Animal.prototype.saludar = function(){
+            console.log(`Hola yo soy ${this.nombre}`)
+        }
+
+       const snoopy = new Animal("snoopy","macho"),
+       lolabunny = new Animal("lola bunny","hembra")
+       
+       console.log(snoopy);
+       console.log(lolabunny);
+       snoopy.sonar();
+       snoopy.saludar();
+       lolabunny.sonar();
+       lolabunny.saludar();
+       
+
+
+    </script>
+</body>
+</html>

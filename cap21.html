@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCIONES ARRAY - FUNCIONES FLECHA</title>
+</head>
+<body>
+    <script>
+        const saludo = () => console.log(`Hola`)
+        saludo();
+        const saludoDos = nombre => console.log(`Hola ${nombre}`)
+        saludoDos("Leonel");
+
+        const sumar = function(a,b){
+            return a + b;
+
+        } 
+        console.log(sumar(8,9))
+
+        const restar = (a,b) => a-b;
+        console.log(restar(8,9));
+
+        const functionDeVariasLinea = () =>{
+            console.log("UNO")
+            console.log("DOS")
+            console.log("TRES")
+
+        }
+        functionDeVariasLinea()
+
+        const numeros = [1,2,3,4,5];
+
+        numeros.forEach((el,index) => console.log(`${el} esta en la posicion ${index}`));
+
+        function perro(){
+            console.log(this);
+
+        }
+        perro();
+
+        const gato ={
+            nombre: "Chula",
+            maullar() { 
+                console.log(this)
+
+            }
+        }
+        gato.maullar();
+
+
+
+
+
+
+        
+
+    </script>
+</body>
+</html>

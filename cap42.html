@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios del 18 al 20</title>
+</head>
+<body>
+    <script>
+        //Funcion que detecta si es una vocal o una consonante y devuelve el numero de ambas.
+        
+        /*const vocalesCostantes = (cadena = "") =>{
+            if(!cadena) return console.warn("No ingresaste una cadena");
+            if(typeof cadena !== "string") return console.warn(`El valor ingresado ${cadena} no es un texto`);
+            let vocales = 0,
+            consonantes = 0;
+            cadena = cadena.toLocaleLowerCase();
+            for (let letra of cadena) {
+                if(/[aeiou]/.test(letra)){ vocales++;}
+                if(/[bcdfghjklmnñrstvxwyz]/.test(letra)){consonantes++;}}
+            return console.info({
+                cadena,
+                vocales,
+                consonantes
+            })
+        }
+        vocalesCostantes();
+        vocalesCostantes(3);
+        vocalesCostantes("Hola mundo");*/
+
+        //Programar una funcion que detecte si un nombre es verdadero.
+        /*const validar = (nombre = "") =>{
+            if(!nombre) return console.warn("No ingresaste una cadena");
+            if(typeof nombre !== "string") return console.warn(`El valor ingresado ${nombre} no es un texto`);
+            let expReg = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/g.test(nombre);
+            return (expReg)
+            ?console.info(`El nombre ingresado ${nombre} es valido`)
+            :console.info(`El nombre ingresado ${nombre} no es valido`)
+        }
+        validar();
+        validar(3);
+        validar("Leonel");
+        validar("Leonel Estrada");
+        validar("Leonel Estrada, 35");*/
+
+        /*const validarEmail = (email = "") =>{
+            if(!email) return console.warn("No ingresaste una cadena");
+            if(typeof email !== "string") return console.warn(`El valor ingresado ${email} no es un texto`);
+            let expReg = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-])*(\.[a-z]{2,15})/i.test(email);
+            return (expReg)
+            ?console.info(`El correo ingresado ${email} es valido`)
+            :console.info(`El correo ingresado ${email} no es valido`)
+        }
+         
+        validarEmail();
+        validarEmail(3);
+        validarEmail("john,mir@gmail.com");
+        validarEmail("johnmir@gmail.com");*/
+
+        //fusion 19-20
+
+        const validarPatron = (cadena = "",patron = undefined) =>{
+            if(!cadena) return console.warn("No ingresaste una cadena");
+            if(typeof cadena !== "string") return console.warn(`El valor ingresado ${cadena} no es un texto`);
+            if(patron === undefined) return console.warn("No ingresaste una cadena");
+            if(!(patron instanceof RegExp)) return console.warn(`El valor ingresado ${patron} no es una expresion regular`);
+            let expReg = patron.test(cadena);
+            return (expReg)
+            ?console.info(`El correo ingresado ${cadena} es valido`)
+            :console.info(`El correo ingresado ${cadena} no es valido`)
+        }
+        validarPatron();
+        validarPatron({});
+        validarPatron("Hola mundo");
+        validarPatron("Hola mundo","text");
+        validarPatron("leonel estrada",/^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/g);
+        validarPatron("leonel estrada 19",/^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/g);
+        validarPatron("leonel estrada",/^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-])*(\.[a-z]{2,15})/i);
+        validarPatron("leonelestrada@gmail.com",/^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-])*(\.[a-z]{2,15})/i);
+        validarPatron("leonelestrada@gmail.com", new RegExp("^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-])*(\\.[a-z]{2,15})", "i"));
+        validarPatron("leonel,estrada@gmail.com", new RegExp("^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-])*(\\.[a-z]{2,15})", "i"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETS</title>
+</head>
+<body>
+    <script>
+        //Estructura similar a au  array pero de datos unicos
+        //Arreglo que solo acepta valores unicos.
+        const set = new Set([1,2,3,3,true,false,false,{},{},"hola","HOLA"]);
+        console.log(set);
+        //JavaScript es case sensitive
+        console.log(set.size);//EN VEZ DE LENGTH       
+        const setDos = new Set();
+        setDos.add(1);
+        setDos.add(2);
+        setDos.add(2);
+        setDos.add(3);
+        setDos.add(true);
+        setDos.add(true);
+        setDos.add(false);
+        setDos.add({});
+        setDos.add({});
+        console.log(setDos);
+        console.log(setDos.size);
+        console.log("Recorriendo setDos")
+        for (let elementos of setDos){
+            console.log(elementos)
+        }
+        console.log("Recorriendo set")
+        set.forEach(element => {
+            console.log(element)
+        });
+        console.log("Accediendo a la posicion");
+        const comportamientoSetArray = Array.from(set);
+        console.log(comportamientoSetArray);
+        console.log(comportamientoSetArray[0]);
+        //Set objeto especial con caracteristicas de arreglos.
+        set.delete("HOLA");
+        console.log(set); //Elimina valores del set
+        console.log(set.has("hola"));//has comprueba si existe ese valor en el set.
+        console.log(set.has(19));
+        setDos.clear();//Vacea todo el set
+        console.log(setDos);
+    </script>
+</body>
+</html>

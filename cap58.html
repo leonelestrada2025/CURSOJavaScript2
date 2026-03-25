@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades dinamicas</title>
+</head>
+<body>
+    <script>
+        const objetoUsuarios = {
+            [`id_${Math.round(Math.random()*100 + 5)}`]:"Valor aleatorio"
+        }
+        console.log(objetoUsuarios);
+        const usuarios = ["leonel","galilea","yeimi","angy","angeelica"];
+        usuarios.forEach((usuarios, index) => objetoUsuarios[`id_${index}`] = usuarios);
+        console.log(objetoUsuarios);
+        //Se va generrar Id_1 por cada usuario.
+        
+    </script>
+</body>
+</html>

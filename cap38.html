@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindromo</title>
+</head>
+<body>
+    <script>
+        /*function palindromo(cadena){
+            let palinArray = cadena.split('');
+            let arrayInvertido = palinArray.reverse();
+            let textoInvertido = arrayInvertido.join('');
+
+            if (textoInvertido === cadena){
+                console.log("Tu palabra es un palindromo");
+            }else{
+                console.log("Tu palabra no es un palindromo");
+            }
+        }
+        palindromo("ana");
+
+        //Metodo mircha
+        //salas
+        /*const palindro = (palabra = "") =>{
+            if(!palabra) return console.warn("No ingresaste el texto largo");
+
+            palabra = palabra.toLowerCase();
+            let alReves = palabra.split("").reverse("").join("");
+
+            return(palabra === alReves)
+            ?console.info(`Si es un palindromo, la palabra original ${palabra}, palabra alrreves ${alReves}`)
+            :console.info(`NO no es un palindromo, la palabra original ${palabra}, palabra alrreves ${alReves}`)
+
+        } 
+        palindro();
+        palindro("Hola mundo");
+        palindro("salas");
+        palindro("Salas");*/
+
+        const eliminarCaracteres = (texto = "", patron = "") =>
+        (!texto) 
+        ?console.warn("Ingresa un texto")
+        :(!patron)
+        ?console.warn("Ingresa un aptron de caracteres")
+        :console.info(texto.replace(new RegExp(patron,"ig"),""));
+        eliminarCaracteres();
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4, xyz5");
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4, xyz5","xyz");
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4, xyz5","x");
+        
+        
+    </script> 
+</body>
+</html>

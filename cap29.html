@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Corto circuito</title>
+</head>
+<body>
+    <script>
+        //Corto circuito con OR 
+        function saludar(){
+            nombre = nombre || "Desconocido";
+            console.log(`Hola ${nombre}`)
+        }
+        saludar()
+        console.log("Cadena" || "Valor de la derecha")
+        console.log(19 || "Valor de la derecha")
+        console.log(true || "Valor de la derecha")
+        console.log([] || "Valor de la derecha")
+        console.log({} || "Valor de la derecha")
+        console.log(false || "Valor de la derecha")
+        console.log(null || "Valor de la derecha")
+        console.log(undefined || "Valor de la derecha")
+        console.log("" || "Valor de la derecha")
+        console.log(-2 || "Valor de la derecha")
+        console.log(0 || "Valor de la derecha")
+        //Corto circuito con AND
+        console.log(false && "Valor de la derecha")
+        console.log(null && "Valor de la derecha")
+        console.log(undefined && "Valor de la derecha")
+        console.log("" && "Valor de la derecha")
+        console.log(-2 && "Valor de la derecha")
+        console.log(0 && "Valor de la derecha")
+        
+
+    </script>
+</body>
+</html>

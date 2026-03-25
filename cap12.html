@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de operadores</title>
+</head>
+<body>
+    <script>
+        let a = 5 + (5 - 10) * 3;
+        let modulo = 5 % 2;
+        console.log(a);
+        console.log(modulo);
+        //Operadores relacionales 
+        console.log(8 > 9); //false
+        console.log(8 < 9); //true
+        console.log(8 >= 9 ); //false
+        console.log(8 <= 9 ); //true
+        console.log(7 == 7 ); //true
+        console.log("7" == 7 ); //true
+        console.log(7 === 7 ); //true
+        console.log("7" === 7 ); //false
+
+        //operadorees Decremento e incremento
+        let b = 5;
+        i = b + 2;
+        console.log(i); //7
+        b += 3; //b = b + 3
+        console.log(b); //8
+        b/= 3;
+        console.log(b); //2.6666666666666665
+        b *= 3;
+        console.log(b); //8.0
+        b++;
+        b--;
+        ++b;
+        --b;
+        console.log(b); //8.0
+
+        //Operadores lógicos
+        console.log(!true);
+        console.log(!false)
+        console.log((9 === 9 )||(9 === 7 ));
+        console.log((9 === 9 )&&(9 === 7 ));
+        
+
+    </script>
+</body>
+</html>
