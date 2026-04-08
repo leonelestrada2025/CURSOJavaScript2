@@ -2,6 +2,7 @@ import hamburgerMenu from "./menu_amburguesa.js";
 import { digitalclock, alarm } from "./reloj.js";
 import { moveBall, shortcut } from "./teclado.js";
 import countdown from "./cuentaRegresiva.js"
+import scrollTop from "./botonScroll.js";
 //Menu de navegacion de boton amburguesa.
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) =>{
@@ -9,6 +10,8 @@ d.addEventListener("DOMContentLoaded", (e) =>{
     digitalclock("#reloj","#activar-reloj","#desactivar-reloj")
     alarm("assets/ringtones-super-mario-bros.mp3","#activar-alarma","#desactivar-alarma")
     countdown("countdown", "Jun 11, 2026 13:00:00","Día del mundial");
+    scrollTop(".scroll-top-btn");
+
 });
 //Reloj digital.
 d.addEventListener("keydown", (e) => {
